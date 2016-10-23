@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, I am Julian Edelmann and I am becoming a web developer. This is my first app ever and I am excited to see how Ruby on Rails apps work.
 
 Things you may want to cover:
 
