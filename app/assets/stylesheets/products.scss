@@ -1,3 +1,35 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-name,
+.product-description,
+.product-image {
+	display: block;
+	text-align: center;
+}
+
+.product-properties.col-md-4 {
+	margin-top: 50px;;
+}
+
+.first-setting {
+	padding-left: 150px;
+}
+
+.product-index-image {
+	width: 100%;
+	background-position: center;
+	text-align: center;
+}
+
+.cart {
+	position: relative;
+	bottom: 150px;
+	left: 80%;
+	text-align: center;
+	width: 220px;
+	border: 2px solid #B50E38;
+	border-radius: 12px;
+	background-color: white;
+}
