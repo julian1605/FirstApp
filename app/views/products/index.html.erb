@@ -6,24 +6,30 @@
 
 <h1>Products</h1>
 
-<table>
   <thead>
 
   </thead>
 
-  <tbody class="container">
-    <% @products.each do |product| %>
-      <tr class="product-properties col-md-4">
-        <td class="product-name"><strong><%= product.name %></td></strong>
-        <td class="product-image"><%= image_tag(product.image_url) %>
-        <td class="product-description"><%= product.description %></td>
-        <td class="first-setting"><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody>
+    <div class="container">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="product-properties col-md-4">
+            <h5 class="product-name"><strong><%= product.name %></h5></strong>
+            <p class="product-image"><%= image_tag(product.image_url, class="img-responsive") %></p>
+            <p class="product-description"><%= product.description %></p>
+            <p class="product-color"><%= product.colour %></p>
+            <p class="product-price"><%= product.price %> €</p>
+            <td class="first-setting"><%= link_to 'Show', product %></td>
+            <td><%= link_to 'Edit', edit_product_path(product) %></td>
+            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <br>
+            <p class="glyphicon-cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</a></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </tbody>
-</table>
 
 <br>
 
