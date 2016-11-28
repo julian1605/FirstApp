@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 		
 		Product.create(:name => "seed-generated product2", :description => "I also created this product without using the HTML form!")
+		Product.create(:name => 'Seed Product', :description => 'This is a product descitption for a product that is introduced in the seed.rb file', :image_url => '/assets/football.jpg')
