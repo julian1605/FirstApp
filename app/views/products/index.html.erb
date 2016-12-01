@@ -16,7 +16,7 @@
         <% @products.each do |product| %>
           <div class="product-properties col-md-4">
             <h5 class="product-name"><strong><%= product.name %></h5></strong>
-            <p class="product-image"><%= image_tag(product.image_url, class:"img-responsive") %></p>
+            <p class="product-image"><%= image_tag(product.image_url, class:"product-image img-responsive") %></p>
             <p class="product-description"><%= product.description %></p>
             <p class="product-color"><%= product.colour %></p>
             <p class="product-price"><%= product.price %> €</p>
