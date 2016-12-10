@@ -4,10 +4,10 @@
 
 
 // Bootstrap navbar 
-$bgDefault      : #e5e6e7;
-$bgHighlight    : #d25223;
-$colDefault     : #030403;
-$colHighlight   : #08080d;
+$bgDefault      : #d61b1b;
+$bgHighlight    : #fb7c7c;
+$colDefault     : #ecf0f1;
+$colHighlight   : #ecdbff;
 $dropDown       : false;
 .navbar-default {
   background-color: $bgDefault;
@@ -74,20 +74,83 @@ $dropDown       : false;
 }
 
 body {
-	margin-top: 100px;
+	margin: 50px 0 0 0;
 }
 
 h1, h2 {
-	text-align: center;
-	color: #3e3e3e;
+	text-align: left;
   margin-bottom: 20px;
+  margin-left: 200px;
 }
 
-.main-image {
-	margin-left: 25%;
-	padding: 100px 0;
+.header_home {
+  height: 500px;
+  background-image: url("./breakfast1.jpg");
+  background-size: 100%;
+  background-repeat: norepeat;
+  background-position: center;
 }
 
+.how_it_works_title {
+  text-align: center;
+}
+
+.how_it_works_img {
+  margin: 60px auto 0;
+}
+
+.how_it_works_p {
+  text-align: center;
+}
+
+.col-md-12,
+.col-md-9,
+.col-md-3, {
+  padding: 0;
+}
+
+
+.content_index {
+/*Must be below .col..., because of the cascading structure. Otherwise, the content_index padding is set to padding: 0; due the other settings*/
+  padding-top: 70px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #eee;
+}
+
+.content_index h4 {
+  width: 75%;
+  margin: auto;
+}
+
+.hr_index {
+  background-color: black;
+  height: 1px;
+  width: 110%;
+  margin: 0;
+  margin-left: -20px;
+  border-top: 0;
+}
+
+#back_to_top {
+  display: block;
+  text-align: right;
+  margin-right: 70px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.side-text {
+  font-size: 22px;
+  margin: 75px 20px 20px;
+}
+
+.content_div.last_content {
+  margin-bottom: 100px;
+}
+
+
+/*
 footer {
 	text-align: center;
 	padding-top: 20px;
@@ -104,4 +167,4 @@ footer {
 .copy {
   margin-top: 26px;
 }
-
+*/

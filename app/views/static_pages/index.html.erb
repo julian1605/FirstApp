@@ -1,4 +1,81 @@
-<h1>Welcome to Fitness Germany</h1>
-<h2>Your source for fitness products</h2>
+<div class="header_home" id="top">	
+	<br><br>
+	<h1>breakfast by Break Fast</h1>
+	<h2>Dein Frühstück<br>Frisch - Gesund - Schnell</h2>
+</div>
+<div class="how_it_works">
+	<h3 class="how_it_works_title">So einfach funktioniert's :</h3>
+		<div class="col-md-3 how_it_works_col_1">
+			<%= image_tag("menu-card.png", class: "img-responsive how_it_works_img") %>
+			<p class="how_it_works_p">1. Durch unsere zahlreiche Auswahl an Gerichten stöbern.</p>
+		</div>
+		<div class="col-md-3 how_it_works_col_2">
+			<%= image_tag("shopping-cart.png", class: "img-responsive how_it_works_img") %>
+			<p class="how_it_works_p">2. Lieblingsessen für jeden Morgen auswählen und Beilagen hinzufügen.</p>
+		</div>
+		<div class="col-md-3 how_it_works_col_3">
+			<%= image_tag("cereal.png", class: "img-responsive how_it_works_img") %>
+			<p class="how_it_works_p">3. Wir liefern Ihr Frühstück kostenlos zu Ihnen nach Hause.</p>
+		</div>
+		<div class="col-md-3 how_it_works_col_4">
+		<%= image_tag("covered-food-tray-on-a-hand-of-hotel-room-service.png", class: "img-responsive how_it_works_img") %>
+		<p class="how_it_works_p">4. Einfach täglich auspacken und genießen.</p>
+		</div>
+		<hr class="hr_index">
+	</div>
+	<div class="content_index col-md-12">
+		<h4>Einfach nach Hause liefern lassen und täglich unkomplizert und ohne Probleme eines von vielen Frühstücken genießen.<br> Wenn auch Sie keine Lust oder Zeit dafür haben, jeden morgen in der Küche zu stehen, um sich etwas zu essen zuzubereiten und auch keine Zeit für den Abwasch danach übrig ist, lassen Sie sich einfach von uns versorgen und starten Sie richtig in den Tag.</h4>
+		<br>
+		<h4>Das Frühstück ist die wichtigste Mahlzeit, deshalb liegt es und am Herzen, dass auch Sie dabei nicht zu kurz kommen.</h4>
+	</div>
 
-<%= image_tag("pizza.jpg", class: "img-responsive main-image", width: '50%') %>
+	<div class="content_div col-md-12">
+		<hr class="hr_index">
+		<div class="left_content col-md-9">
+			<%= image_tag("placeholder1.jpg", class: "place-image", width: '100%') %>
+		</div>
+		<div class="right_content col-md-3">
+			<h3 class="side-text">Frische genießen</h3>
+		</div>
+	</div>
+
+	<div class="content_div col-md-12">
+		<div class="left_content col-md-3">
+			<h4 class="side-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</h3>
+		</div>
+		<div class="right_content col-md-9">
+			<%= image_tag("placeholder2.jpg", class: "place-image", width: '100%') %> 
+		</div>
+	</div>
+
+	<div class="content_div col-md-12">
+		<div class="left_content col-md-9">
+			<%= image_tag("placeholder3.jpg", class: "img-responsive place-image", width: '100%') %> 
+		</div>
+		<div class="right_content col-md-3">
+			<h3 class="side-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</h3>
+		</div>
+	</div>
+
+	<div class="content_div col-md-12">
+		<div class="left_content col-md-3">
+			<h3 class="side-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</h3>
+		</div>
+		<div class="right_content col-md-9">
+			<%= image_tag("placeholder4.jpg", class: "img-responsive place-image", width: '100%') %> 
+		</div>
+	</div>
+
+	<div class="content_div last_content col-md-12">
+		<div class="left_content col-md-9">
+			<%= image_tag("placeholder5.jpg", class: "img-responsive place-image", width: '100%') %> 
+		</div>
+		<div class="right_content col-md-3">
+			<h3 class="side-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</h3>
+		</div>
+	</div>
+
+	<%= render "products/featuredProducts", product: @product %>
+
+	<p id="back_to_top"><a href="#top">Zurück zum Anfang</a></p>
+	

@@ -14,3 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// $( document ).ready(function() {
+// 	$("body").mouseenter(function(){
+// 		$(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeOut(500);
+//     $(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeIn(5000);
+// 	});
+// });
+
+$( document ).ready(function() {
+	jQuery(window).load(function () {
+		$(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeOut(2000);
+    $(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeIn(4500);
+	});
+});
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+<body id="products_body">
 <div class="banner">
 <%= image_tag("training2.jpeg", class: "img-responsive product-show-image") %>
 </div>
@@ -5,32 +6,62 @@
 <div class="show-content">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
 
-<p>
-  <strong></strong>
-  <%= image_tag(@product.image_url) %>
-</p>
+<div class="row">
+	<div class="col-md-5">
+		<p>
+		  <strong></strong>
+		  <%= image_tag(@product.image_url, class:"show_image") %>
+		</p>
+	</div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @product.colour %>
-</p>
+	<div class="col-md-4">
+		<p class="p_show_product_name">
+  		<strong><%= @product.name %></strong>
+		</p>
 
-<p>
-  <%= @product.price %>
-</p>
+		<p>
+  		<%= @product.description %>
+		</p>
+
+		<p>
+  		<strong>Color:</strong>
+  		<%= @product.colour %>
+		</p>
+
+		<p>
+		Bestellmenge: 	
+		<select class="selectpicker" data-style="btn-primary" >
+	      <option>1</option>
+	      <option>2</option>
+	      <option>3</option>
+	      <option>4</option>
+	      <option>5</option>
+  		</select>
+		</p>
+
+		<p>
+		  <%= @product.price %> €
+		</p>
+	</div>
+
 </div>
+
+<p>Subtitle</p>
+<p>
+	Paragraph Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+</p>
+
+
+</div>
+
+<%= render 'featuredProducts', product: @product %>
+
 
 <%= render 'cart', product: @product %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+</body>

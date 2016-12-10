@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+.navbar-brand {
+	padding-top: 0;
+}
+
+footer {
+	text-align: center;
+	height: 110px;
+  background-color: #7e7a7a;
+  color: black;
+}
+
+.col-md-4.middle_footer {
+	margin-top: 20px;
+}
+
+.p-impressum {
+  margin: 4px;
+}
+
+.copy {
+  margin: 4px 0;
+}
