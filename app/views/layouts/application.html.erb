@@ -31,10 +31,10 @@
       </div> <!-- end navbar header-->
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/static_pages/index.html">Home</a></li>
-          <li><a href="/static_pages/about.html">About</a></li>
+          <li><%= link_to "Home", static_pages_index_path %></li>
+          <li><%= link_to "About", static_pages_about_path %></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="/products">Products</a></li>
+          <li><%= link_to "Products", products_path %></li>
         </ul>
       </div> <!-- end navbar collapse -->
     </div> <!-- end nav container -->

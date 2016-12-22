@@ -6,7 +6,7 @@
   <% @products.each do |product| %>
     <div class="product-properties col-md-2">
       <%= image_tag(product.image_url, class:"referenced-product-image img-responsive") %>
-       <h6 class="product-name"><strong><%= product.name %></strong></h6>
+       <h6 class="product-name"><strong><%= link_to product.name, product %></strong></h6>
     </div>
   <% end %>
 </div>
