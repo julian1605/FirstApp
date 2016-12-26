@@ -101,3 +101,56 @@ referenced-product-image {
 .featured_image {
 	width: 50px;
 }
+
+
+/*EDIT - PAGE and FORM - PAGE*/
+
+.edit-title,
+.field,
+.actions {
+	text-align: center;
+}
+
+
+.edit-title {
+	margin: 0;
+	padding: 50px 0 30px;
+	background-color: #eee;
+}
+
+.field {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.field2,
+.field4,
+.field6 {
+	background-color: #eee;
+}
+
+.actions.field6 {
+	margin-bottom: 0;
+}
+
+.actions {
+	padding-top: 20px;
+}
+
+.form-actions.btn.btn-default {
+	border-width: 1.7px;
+}
+
+.edit-links {
+	padding-left: 30px;
+}
+
+
+/*NEW - PAGE*/
+
+.new-title {
+	margin: 0;
+	padding: 50px 0 30px;
+	background-color: #eee;
+	text-align: center;
+}

@@ -30,6 +30,13 @@
         </div> <!--end projectName -->
       </div> <!-- end navbar header-->
       <div class="navbar-collapse collapse">
+      <div class="searchbar">
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+            <%= label_tag(:q, "") %>
+            <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control") %>
+            <%= submit_tag("Search", class: "btn btn-danger") %>
+          <% end %>
+        </div>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", static_pages_index_path %></li>
           <li><%= link_to "About", static_pages_about_path %></li>
