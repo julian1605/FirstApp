@@ -87,3 +87,59 @@ div {
 label {
   display: block;
 }
+
+/* LOGIN */
+
+.login-title {
+  text-align: center;
+  margin-left: 0;
+}
+
+.login-checkbox,
+.login-remember {
+  display: inline-block;
+}
+
+.login-remember {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.field.login {
+  padding: 0;
+}
+
+
+
+/* SINGUP */
+
+.signup-title {
+  text-align: center;
+  margin-left: 0;
+}
+
+.field.signup {
+  padding: 0;
+}
+
+
+/* EDIT */
+
+.user-edit-title {
+  text-align: center;
+  margin-left: 0;
+}
+
+.field.edit {
+  padding-top: 10px;
+}
+
+.edit-cancel {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.cancel-confirm {
+  text-align: center;
+}
+
