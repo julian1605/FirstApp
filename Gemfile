@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use devise for user passwords and emails
 gem 'devise'
+#CanCanCan for Authorization 
+gem 'cancancan', '~> 1.10'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
