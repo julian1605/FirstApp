@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @products = Product.limit(4)
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new

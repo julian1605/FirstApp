@@ -25,10 +25,10 @@
   		<%= @product.description %>
 		</p>
 
-		<p>
+		<!-- <p>
   		<strong>Color:</strong>
   		<%= @product.colour %>
-		</p>
+		</p> -->
 
 		<p>
 		Bestellmenge: 	
@@ -44,9 +44,16 @@
 		<p>
 		  <%= @product.price %> €
 		</p>
+
+		<p class="average-rating">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
+
 	</div>
 
+
 </div>
+
+<%= render 'new_comment' %>
 
 <p>Subtitle</p>
 <p>
@@ -65,5 +72,7 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+<%= render 'comments' %>
 
 </body>
