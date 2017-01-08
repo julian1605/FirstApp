@@ -74,5 +74,7 @@
 <%= link_to 'Back', products_path %>
 
 <%= render 'comments' %>
-
+<div class="apple_pagination">
+	<%= will_paginate @comments %>
+</div>
 </body>

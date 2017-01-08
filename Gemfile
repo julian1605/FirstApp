@@ -33,6 +33,10 @@ gem 'devise'
 #CanCanCan for Authorization 
 gem 'cancancan', '~> 1.10'
 
+
+## Gemfile for Rails 3+, Sinatra, or Merb
+gem 'will_paginate', '~> 3.1.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
