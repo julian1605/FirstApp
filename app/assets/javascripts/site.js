@@ -7,3 +7,11 @@ $(document).on('turbolinks:load', function(){
       }
     });
 });
+
+// $( document ).ready(function() {
+// 	$("body").mouseenter(function(){
+// 		$(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeOut(500);
+//     $(".how_it_works_col_1, .how_it_works_col_2, .how_it_works_col_3, .how_it_works_col_4").fadeIn(5000);
+// 	});
+// });
+
