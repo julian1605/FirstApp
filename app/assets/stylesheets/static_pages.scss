@@ -120,9 +120,13 @@ h1, h2 {
   margin: 20px 10px;
 }
 
+
+//url zu image-url oder image_path ändern
+//eventuell ohne "./"
+//alle 4 Varianten ausprobieren um Bild auf Herokou anzuzzeigen
 .header_home {
   height: 500px;
-  background-image: url("./index_image_1.jpg");
+  background-image: image_path("./index_image_1.jpg");
   background-size: 100%;
   background-repeat: norepeat;
   background-position: center;
