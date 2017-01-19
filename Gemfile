@@ -35,6 +35,13 @@ gem 'devise'
 #CanCanCan for Authorization 
 gem 'cancancan', '~> 1.10'
 
+#rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
+
+
+
 
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
