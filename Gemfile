@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 #CanCanCan for Authorization 
 gem 'cancancan', '~> 1.10'
+#Controller testing for functinal tests
+gem 'rails-controller-testing'
+
 
 #rspec
 group :development, :test do
