@@ -20,8 +20,10 @@ describe UsersController, :type => :controller do
 				expect(assigns(:user)).to eq @user
 			end
 
-			it 'does not grant access to another users page' do |variable|
+			it 'does not grant access to another users page' do
 				get :show, id: @user2.id
+				expect(response).not_to be_success
+				expect(response).to have_http_status(302)
 				expect(response).to redirect_to(root_path)
 			end
 
