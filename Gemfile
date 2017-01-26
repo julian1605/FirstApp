@@ -38,9 +38,13 @@ gem 'cancancan', '~> 1.10'
 gem 'rails-controller-testing'
 
 
-#rspec
+
 group :development, :test do
+  #rspec
   gem 'rspec-rails', '~> 3.5'
+  # FactoryGirl
+  gem "factory_girl_rails", "~> 4.0"
+
 end
 
 

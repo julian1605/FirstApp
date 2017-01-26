@@ -1,13 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe Product do
-
-		context "when a user is created" do
-	
-			it "should not create a valid user" do
-				expect(User.new(last_name: "Doe")).not_to be_valid
-			end
-
-		end	
-
+describe User, :type => :model do
+  it "should not validate users without an email address" do
+    @user = FactoryGirl.build(:user, email: "not_an_email")
+    expect(@user).to_not be_valid
+  end
 end
