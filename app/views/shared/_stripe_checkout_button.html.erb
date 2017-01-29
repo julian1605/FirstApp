@@ -1,9 +1,15 @@
+<% if @product.price != nil %>
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="/assets/break_Logo_2.png"
   data-name= <%= @product.name %>
   data-description= <%= @product.description %>
-  data-amount= <%= Integer(@product.price * 100) if @product.price != nil %> <% "error" if @product.price = nil %>>
+  data-amount= <%= Integer(@product.price * 100) %>>
 </script>
-<!-- add conditional to @product.price to check if there is a price available... if not display something else -->
+
+
+<!-- if the product has no price, it cannot be purchased -->
+<% elsif @product.price == nil %>
+	<p>We are sorry. Right now the products cannot be purchased.</p>
+<% end %>
