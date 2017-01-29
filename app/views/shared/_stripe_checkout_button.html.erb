@@ -4,5 +4,6 @@
   data-image="/assets/break_Logo_2.png"
   data-name= <%= @product.name %>
   data-description= <%= @product.description %>
-  data-amount= <%= Integer(@product.price * 100) %>>
+  data-amount= <%= Integer(@product.price * 100) if @product.price != nil %> <% "error" if @product.price = nil %>>
 </script>
+<!-- add conditional to @product.price to check if there is a price available... if not display something else -->
