@@ -1,4 +1,5 @@
-<% if @product.price != nil %>
+<!-- addition: products price should not be 0 -->
+<% if @product.price != nil && @product.price != 0.0 %>
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
