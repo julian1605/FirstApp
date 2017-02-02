@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    byebug
     if params[:q]
       search_term = params[:q]
       if Rails.env.development?
@@ -14,6 +15,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+    logger.debug
   end
 
   # GET /products/1

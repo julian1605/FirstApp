@@ -15,6 +15,7 @@
     <div class="container">
       <div class="row">
         <% @products.each do |product| %>
+        <% logger.debug "Product: #{product.name}"%>
           <div class="product-properties col-md-3" id="single_product">
             <h5 class="product-name"><strong><%= product.name %></h5></strong>
             <p class="product-image"><%= image_tag(product.image_url, class:"product-image img-responsive") %></p>
