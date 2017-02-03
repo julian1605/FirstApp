@@ -53,6 +53,10 @@ end
 gem 'stripe'
 
 
+#brakeman
+gem "brakeman", :require => false
+
+
 
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
