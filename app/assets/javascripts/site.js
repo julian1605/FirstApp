@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function(){
+		//Raty rating system   
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]'});
     $('.rated').raty({ path: '/assets',
       readOnly: true,
@@ -6,7 +7,10 @@ $(document).on('turbolinks:load', function(){
         return $(this).attr('data-score');
       }
     });
+    //elevateZoom for images
+    $('.img-zoom').elevateZoom();
 });
+
 
 // $( document ).ready(function() {
 // 	$('.alert, .alert-info, .alert-warning').delay(3000)fadeOut(2000);
