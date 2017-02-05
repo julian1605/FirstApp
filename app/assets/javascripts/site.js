@@ -1,12 +1,19 @@
+var refreshRating = function() {
+  //Raty rating system   
+  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]'});
+  $('.rated').raty({ path: '/assets',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+}
+
+
 $(document).on('turbolinks:load', function(){
 		//Raty rating system   
-    $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]'});
-    $('.rated').raty({ path: '/assets',
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
-    });
+    refreshRating();
+    
     //elevateZoom for images
     $('.img-zoom').elevateZoom();
 });

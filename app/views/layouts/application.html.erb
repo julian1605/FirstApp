@@ -70,14 +70,10 @@
               <%= link_to('Login', new_user_session_path) %>
             <% end %>
           </li>
-  <!-- Show current user and link to profile settings
-    add a 'link to' to users profile and integrate user.first name in the link to
-          <li> 
+          <li>
             <% if user_signed_in? %>
-              <%= current_user.first_name %>
+              <%= link_to current_user.first_name, users_path %></li>
             <% end %>
-          </li>
-          -->
         </ul>
       </div> <!-- end navbar collapse -->
     </div> <!-- end nav container -->

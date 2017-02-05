@@ -6,7 +6,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+  ###### Try to only show the current user on the index page
+  ######
+  #  if current_user.admin?
+  #    @users = User.all
+  #  else
+  #    @users = current_user
+  #  end
   end
 
   # GET /users/1
