@@ -15,24 +15,15 @@
     <div class="container">
       <div class="row">
         <% @products.each do |product| %>
-        <% logger.debug "Product: #{product.name}"%>
-          <div class="product-properties col-md-3" id="single_product">
-            <h5 class="product-name"><strong><%= product.name %></h5></strong>
-            <p class="product-image"><%= image_tag(product.image_url, class:"product-image img-responsive") %></p>
-            <p class="product-description"><%= product.description %></p>
-            <!-- <p class="product-color"><%= product.colour %></p> -->
-            <p class="product-price"><%= product.price %> €</p>
-            <p class="glyphicon-cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</a></p>
-            <td class="first-setting"><%= link_to 'Show', product %></td>
-            <% if signed_in? && current_user.admin? %>
-              <td><%= link_to 'Edit', edit_product_path(product) %></td>
-              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <% end %>
-          </div>
+          <% cache(cache_key_for_products) do %>
+            <%= render product %>
+          <% end %>
         <% end %>
       </div>
     </div>
   </tbody>
+  Rails.cache.write("foo", "bar")
+puts Rails.cache.read("foo")
 
 <br>
 

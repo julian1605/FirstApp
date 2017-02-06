@@ -15,7 +15,7 @@
 		  <%= image_tag(@product.image_url, class: "show_image img-zoom", data_zoom_image: @product.image_url) %>
 		</p>
 	</div>
-
+<% cache @product do %>
 	<div class="col-md-4">
 		<p class="p_show_product_name">
   		<strong><%= @product.name %></strong>
@@ -54,6 +54,8 @@
 
 
 	</div>
+
+	<% end %> <!-- end of caching -->
 
 
 </div>

@@ -37,6 +37,9 @@ gem 'cancancan', '~> 1.10'
 #Controller testing for functinal tests
 gem 'rails-controller-testing'
 
+#dalli for caching on Heroku
+gem 'dalli'
+
 
 
 group :development, :test do
