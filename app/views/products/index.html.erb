@@ -16,14 +16,12 @@
       <div class="row">
         <% @products.each do |product| %>
           <% cache(cache_key_for_products) do %>
-            <%= render product %>
+            <%= render @products %>
           <% end %>
         <% end %>
       </div>
     </div>
   </tbody>
-  Rails.cache.write("foo", "bar")
-puts Rails.cache.read("foo")
 
 <br>
 
