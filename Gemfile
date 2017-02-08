@@ -41,6 +41,10 @@ gem 'rails-controller-testing'
 gem 'dalli'
 
 
+#redis
+gem 'redis-rails'
+
+
 
 group :development, :test do
   #rspec
