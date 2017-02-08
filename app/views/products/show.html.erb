@@ -72,8 +72,9 @@
 
 </div>
 
-<%= render 'featuredProducts', product: @product %>
-
+<% cache(cache_key_for_products) do %>
+	<%= render 'featuredProducts', product: @product %>
+<% end %> <!-- cache_key_for_products cache end -->
 
 <%= render 'cart', product: @product %>
 
