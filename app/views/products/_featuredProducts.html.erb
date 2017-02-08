@@ -1,12 +1,14 @@
-<h5 class="title_referenced_products"><strong>Das könnte Ihnen auch gefallen</strong></h5>
- 
-<div class="row">
-	<div class="col-md-1">
+<% cache do %>
+	<h5 class="title_referenced_products"><strong>Das könnte Ihnen auch gefallen</strong></h5>
+	 
+	<div class="row">
+		<div class="col-md-1">
+		</div>
+	  <% @products.each do |product| %>
+	    <div class="product-properties col-md-2">
+	      <%= image_tag(product.image_url, class:"referenced-product-image img-responsive") %>
+	       <h6 class="product-name"><strong><%= link_to product.name, product %></strong></h6>
+	    </div>
+	  <% end %>
 	</div>
-  <% @products.each do |product| %>
-    <div class="product-properties col-md-2">
-      <%= image_tag(product.image_url, class:"referenced-product-image img-responsive") %>
-       <h6 class="product-name"><strong><%= link_to product.name, product %></strong></h6>
-    </div>
-  <% end %>
-</div>
+<% end %>
