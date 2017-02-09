@@ -83,6 +83,8 @@
 <% end %>
 <%= link_to 'Back', products_path %>
 
+
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments' %>
 <div class="apple_pagination">
 	<%= will_paginate @comments %>

@@ -28,6 +28,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.app_generators.javascript_engine = :javascript
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
