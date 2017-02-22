@@ -1,8 +1,9 @@
 <body id="products_body">
-<div class="banner">
-<%= image_tag("training2.jpg", class: "img-responsive product-show-image") %>
-</div>
-
+<% cache do %>
+	<div class="banner">
+	<%= image_tag("training2.jpg", class: "img-responsive product-show-image") %>
+	</div>
+<% end %>
 <div class="show-content">
 <p id="notice"><%= notice %></p>
 
