@@ -94,11 +94,15 @@ h1, h2 {
 }
 */
 
-.layer1 {
+.layer1,
+.layer2 {
   height: 200px;
-  width: 450px;
   position: absolute;
   top: 150px;
+}
+
+.layer1 {
+  width: 450px;
   left: 20%;
   z-index: 1;
   background-color: black;
@@ -106,10 +110,7 @@ h1, h2 {
 }
 
 .layer2 {
-  height: 200px;
   width: 400px;
-  position: absolute;
-  top: 150px;
   left: 22%;
   z-index: 2;
   color: white;
@@ -121,9 +122,6 @@ h1, h2 {
 }
 
 
-//url zu image-url oder image_path ändern
-//eventuell ohne "./"
-//alle 4 Varianten ausprobieren um Bild auf Herokou anzuzzeigen
 .header_home {
   height: 500px;
   background-image: image-url("index_image_1.jpg");
@@ -132,16 +130,13 @@ h1, h2 {
   background-position: center;
 }
 
-.how_it_works_title {
+.how_it_works_title,
+.how_it_works_p {
   text-align: center;
 }
 
 .how_it_works_img {
   margin: 60px auto 0;
-}
-
-.how_it_works_p {
-  text-align: center;
 }
 
 .col-md-12,
@@ -152,7 +147,8 @@ h1, h2 {
 
 
 .content_index {
-/*Must be below .col..., because of the cascading structure. Otherwise, the content_index padding is set to padding: 0; due the other settings*/
+/*Must be below .col..., because of the cascading structure. 
+Otherwise, the content_index padding is set to padding: 0; due the other settings*/
   padding-top: 70px;
   padding-bottom: 60px;
   text-align: center;

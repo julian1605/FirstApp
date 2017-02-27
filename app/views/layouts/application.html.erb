@@ -13,6 +13,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <!-- beide tags neu eingefügt -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= csrf_meta_tags %>
+
   </head>
 
   <body>
@@ -74,6 +79,16 @@
     </div> <!-- end nav container -->
   </nav> <!-- end navbar -->
 
+  <!-- for shopping cart -->
+    <div class="row">
+      <div class="col-xs-6">
+        <h1><%= link_to "My Store", root_path %></h1>
+      </div>
+      <div class="col-xs-6 text-right">
+        <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+      </div>
+    </div>
+  <!-- end shopping cart -->
 
     <%= yield %>
     

@@ -4,7 +4,9 @@
       <% cache product do %>
         <div class="product-properties col-md-3" id="single_product">
           <h5 class="product-name"><strong><%= product.name %></h5></strong>
+        <% if product.image_url != nil %>
           <p class="product-image"><%= image_tag(product.image_url, class:"product-image img-responsive") %></p>
+        <% end %>
           <p class="product-description"><%= product.description %></p>
           <!-- <p class="product-color"><%= product.colour %></p> -->
           <p class="product-price"><%= product.price %> €</p>

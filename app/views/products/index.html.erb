@@ -1,31 +1,9 @@
-<body id="products_body">
-<p id="notice"><%= notice %></p>
+<h3 class="text-center">Products for Sale</h3>
 
-<% cache do %>
-  <div class="banner">
-  <%= image_tag("training1.jpg", class: "img-responsive product-index-image") %>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @products.each do |product| %>
+      <%= render "product_row", product: product, order_item: @order_item %>
+    <% end %>
   </div>
-<% end %>
-
-<h1>Produkte</h1>
-
-  <thead>
-
-  </thead>
-
-  <tbody>
-    <div class="container">
-      <div class="row">
-
-      <%= render 'product', product: @products %>
-
-      </div>
-    </div>
-  </tbody>
-
-<br>
-
-<% if signed_in? && current_user.admin? %>
-  <%= link_to 'New Product', new_product_path %>
-<% end %>
-</body>
+</div>
