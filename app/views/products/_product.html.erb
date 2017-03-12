@@ -8,17 +8,34 @@
           <p class="product-image"><%= image_tag(product.image_url, class:"product-image img-responsive") %></p>
         <% end %>
           <p class="product-description"><%= product.description %></p>
-          <!-- <p class="product-color"><%= product.colour %></p> -->
+    <!-- hide product information due to additional shopping cart
           <p class="product-price"><%= product.price %> €</p>
           <p class="glyphicon-cart"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</a></p>
-          <td class="first-setting"><%= link_to 'Show', product %></td>
-        <% end %> <!-- inner cache end -->
+    -->
+          <% end %> <!-- inner cache end -->
+        
+
+        <!-- form_for cart -->
+
+      <%= form_for order_item, remote: true do |f| %>
+      <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
+        <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :product_id, value: product.id %>
+            <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
 
           <% if signed_in? && current_user.admin? %>
             <%= link_to 'Edit', edit_product_path(product) %>
             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
           
+
+        <td class="first-setting"><%= link_to 'Show', product %></td>
+
         </div>
         
 <% end %> <!-- products.each end -->
